@@ -1,4 +1,4 @@
-const CACHE_NAME = 'riki-app-store-v1';
+const CACHE_NAME = 'riki-app-store-v2';
 const urlsToCache = [
   '/',
   '/index.html',
