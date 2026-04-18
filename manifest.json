@@ -2,7 +2,7 @@
   "name": "RikiAppStore",
   "short_name": "RikiTools",
   "description": "Developer Tools Hub — Smart Tools, Not Downloads. Flutter-style utilities: JSON formatter, Base64, Password Gen & more.",
-  "start_url": "/",
+  "start_url": "/index.html",
   "display": "standalone",
   "theme_color": "#0F172A",
   "background_color": "#F5F5F9",
