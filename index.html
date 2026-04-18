@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="theme-color" content="#0F172A">
-  <title>RikiAppStore — Developer Tools Hub</title>
+  <meta name="description" content="RikiAppStore - Developer Tools Hub. 12+ smart utilities: JSON formatter, crypto tools, regex tester, JWT debugger & more. No downloads, just tools.">
+  <title>RikiAppStore — Dev Tools Hub</title>
   <link rel="manifest" href="manifest.json">
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0,1" />
@@ -28,13 +29,12 @@
       color: #f1f5f9;
     }
 
-    /* Flutter-style ripple utility */
+    /* Ripple effect */
     .ripple {
       position: relative;
       overflow: hidden;
       cursor: pointer;
     }
-
     .ripple:after {
       content: "";
       display: block;
@@ -51,14 +51,12 @@
       opacity: 0;
       transition: transform .4s, opacity .5s;
     }
-
     .ripple:active:after {
       transform: scale(0, 0);
       opacity: 0.3;
       transition: 0s;
     }
 
-    /* app container */
     #app {
       max-width: 1280px;
       margin: 0 auto;
@@ -71,9 +69,8 @@
       justify-content: space-between;
       align-items: baseline;
       padding: 20px 20px 12px;
-      background: inherit;
-      backdrop-filter: blur(0px);
       flex-wrap: wrap;
+      background: inherit;
     }
     .title-section h1 {
       font-size: 1.8rem;
@@ -90,7 +87,7 @@
     }
     .app-actions {
       display: flex;
-      gap: 20px;
+      gap: 12px;
       align-items: center;
     }
     .icon-btn {
@@ -107,14 +104,10 @@
       justify-content: center;
       transition: background 0.2s;
     }
-    body.dark .icon-btn {
-      color: #cbd5e1;
-    }
-    .icon-btn:hover {
-      background: rgba(0,0,0,0.05);
-    }
+    body.dark .icon-btn { color: #cbd5e1; }
+    .icon-btn:hover { background: rgba(0,0,0,0.05); }
 
-    /* search bar */
+    /* Search */
     .search-section {
       padding: 8px 20px;
     }
@@ -132,9 +125,6 @@
       background: #1e293b;
       border-color: #334155;
     }
-    .search-field span {
-      color: #94a3b8;
-    }
     .search-field input {
       flex: 1;
       border: none;
@@ -144,7 +134,7 @@
       font-weight: 500;
     }
 
-    /* grid */
+    /* Grid */
     .tools-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
@@ -156,7 +146,7 @@
       border-radius: 20px;
       padding: 20px 12px;
       text-align: center;
-      box-shadow: 0 6px 14px rgba(0,0,0,0.05), 0 2px 4px rgba(0,0,0,0.02);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.05);
       transition: transform 0.2s cubic-bezier(0.2,0.9,0.4,1.1), box-shadow 0.2s;
       cursor: pointer;
     }
@@ -168,16 +158,10 @@
       transform: translateY(-4px);
       box-shadow: 0 16px 24px rgba(0,0,0,0.1);
     }
-    .tool-icon {
-      font-size: 2.5rem;
-      margin-bottom: 12px;
-    }
-    .tool-name {
-      font-weight: 600;
-      font-size: 0.9rem;
-    }
+    .tool-icon { font-size: 2.5rem; margin-bottom: 12px; }
+    .tool-name { font-weight: 600; font-size: 0.9rem; }
 
-    /* bottom navigation */
+    /* Bottom Navigation */
     .bottom-nav {
       position: fixed;
       bottom: 0;
@@ -192,7 +176,6 @@
       z-index: 100;
       max-width: 1280px;
       margin: 0 auto;
-      box-shadow: 0 -2px 10px rgba(0,0,0,0.02);
     }
     body.dark .bottom-nav {
       background: rgba(18,18,18,0.96);
@@ -208,13 +191,10 @@
       border: none;
       font-weight: 500;
       cursor: pointer;
-      transition: color 0.2s, transform 0.1s;
       padding: 8px 16px;
       border-radius: 32px;
     }
-    .nav-item span:first-child {
-      font-size: 1.6rem;
-    }
+    .nav-item span:first-child { font-size: 1.6rem; }
     .nav-item.active {
       color: #3b82f6;
       background: rgba(59,130,246,0.1);
@@ -224,22 +204,16 @@
       color: #60a5fa;
     }
 
-    /* page container animation (slide transition) */
+    /* Page transitions */
     .page-container {
       animation: slideIn 0.28s cubic-bezier(0.2, 0.9, 0.4, 1.1);
     }
     @keyframes slideIn {
-      from {
-        opacity: 0.6;
-        transform: translateX(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateX(0);
-      }
+      from { opacity: 0.6; transform: translateX(30px); }
+      to { opacity: 1; transform: translateX(0); }
     }
 
-    /* cards / material */
+    /* Cards & workspace */
     .material-card {
       background: white;
       border-radius: 20px;
@@ -247,27 +221,16 @@
       margin: 16px 20px;
       box-shadow: 0 6px 12px rgba(0,0,0,0.05);
     }
-    body.dark .material-card {
-      background: #1e293b;
-    }
+    body.dark .material-card { background: #1e293b; }
     .welcome-card {
       background: linear-gradient(145deg, #ffffff, #f8fafc);
       border-left: 6px solid #3b82f6;
     }
-    body.dark .welcome-card {
-      background: #0f172a;
-    }
+    body.dark .welcome-card { background: #0f172a; }
 
-    .tool-workspace {
-      padding: 20px;
-    }
-    .flex-row {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-    textarea, input.color-input {
+    .tool-workspace { padding: 20px; }
+    .flex-row { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; margin: 12px 0; }
+    textarea, input, select {
       width: 100%;
       padding: 14px;
       border-radius: 20px;
@@ -275,7 +238,7 @@
       font-family: monospace;
       background: #f9f9ff;
     }
-    body.dark textarea, body.dark input {
+    body.dark textarea, body.dark input, body.dark select {
       background: #0f172a;
       border-color: #334155;
       color: white;
@@ -316,16 +279,10 @@
       transform: translateX(-50%);
       z-index: 200;
       font-weight: 500;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
       transition: visibility 0.2s, opacity 0.2s;
       opacity: 0;
     }
-    .snackbar.show {
-      visibility: visible;
-      opacity: 1;
-    }
-
-    /* ad placeholder */
+    .snackbar.show { visibility: visible; opacity: 1; }
     .ad-card {
       background: #f1f5f9;
       border-radius: 20px;
@@ -335,67 +292,59 @@
       color: #475569;
       margin: 20px;
     }
-    body.dark .ad-card {
-      background: #1a202c;
-    }
-
-    @media (min-width: 768px) {
-      .tools-grid {
-        grid-template-columns: repeat(4, 1fr);
-      }
-    }
+    body.dark .ad-card { background: #1a202c; }
+    @media (min-width: 768px) { .tools-grid { grid-template-columns: repeat(4, 1fr); } }
   </style>
 </head>
 <body>
 <div id="app">
   <div class="app-bar">
-    <div class="title-section">
-      <h1>RikiAppStore</h1>
-      <p>Smart Tools, Not Downloads</p>
-    </div>
+    <div class="title-section"><h1>RikiAppStore</h1><p>Smart Tools, Not Downloads</p></div>
     <div class="app-actions">
-      <button class="icon-btn ripple" id="searchGlobalBtn" aria-label="Search"><span class="material-symbols-outlined">search</span></button>
-      <button class="icon-btn ripple" id="darkModeToggleBtn" aria-label="Dark mode"><span class="material-symbols-outlined">dark_mode</span></button>
+      <button class="icon-btn ripple" id="searchGlobalBtn"><span class="material-symbols-outlined">search</span></button>
+      <button class="icon-btn ripple" id="darkModeToggleBtn"><span class="material-symbols-outlined">dark_mode</span></button>
     </div>
   </div>
-
-  <main id="mainContent">
-    <!-- dynamic pages will be injected -->
-  </main>
+  <main id="mainContent"></main>
   <div class="bottom-nav" id="bottomNav"></div>
   <div id="snackbar" class="snackbar">Copied!</div>
 </div>
 
 <script>
-  // ---------- STATE ----------
-  let activeTab = "home";
-  let darkMode = localStorage.getItem("rikiDarkMode") === "true";
-  let currentTool = null; // for subpage tools panel (optional)
-  let searchQuery = "";
-
+  // ---------- FULL TOOLS LIBRARY (12 tools) ----------
   const toolsLibrary = [
-    { id: "json", name: "JSON Formatter", icon: "📋", component: "JsonFormatter" },
-    { id: "base64", name: "Base64 En/Decoder", icon: "🔐", component: "Base64Tool" },
-    { id: "password", name: "Password Generator", icon: "🔑", component: "PasswordGen" },
-    { id: "color", name: "Color Picker", icon: "🎨", component: "ColorPicker" },
-    { id: "url", name: "URL Encoder", icon: "🌐", component: "UrlEncoder" }
-  ];
-
-  // snippets data
-  const snippetsData = [
-    { lang: "JavaScript", title: "Debounce Function", code: "const debounce = (fn, delay) => {\n  let timer;\n  return (...args) => {\n    clearTimeout(timer);\n    timer = setTimeout(() => fn(...args), delay);\n  };\n};" },
-    { lang: "CSS", title: "Glassmorphism Card", code: ".glass {\n  background: rgba(255,255,255,0.2);\n  backdrop-filter: blur(10px);\n  border-radius: 20px;\n}" },
-    { lang: "Dart", title: "Flutter FutureBuilder", code: "FutureBuilder(\n  future: fetchData(),\n  builder: (context, snapshot) {\n    if (snapshot.hasData) return Text('data');\n    return CircularProgressIndicator();\n  },\n);" }
+    { id: "json", name: "JSON Formatter", icon: "📋", desc: "Format & validate JSON" },
+    { id: "base64", name: "Base64 Tool", icon: "🔐", desc: "Encode/Decode Base64" },
+    { id: "password", name: "Password Gen", icon: "🔑", desc: "Secure passwords" },
+    { id: "color", name: "Color Picker", icon: "🎨", desc: "Pick & copy HEX" },
+    { id: "url", name: "URL Encoder", icon: "🌐", desc: "Encode/Decode URLs" },
+    { id: "jwt", name: "JWT Debugger", icon: "🪪", desc: "Decode JWT tokens" },
+    { id: "regex", name: "Regex Tester", icon: "⚙️", desc: "Test regular expressions" },
+    { id: "hash", name: "Hash Generator", icon: "🔒", desc: "MD5, SHA-1, SHA-256" },
+    { id: "timestamp", name: "Timestamp Conv", icon: "⏱️", desc: "Unix ↔ Date" },
+    { id: "qr", name: "QR Generator", icon: "📱", desc: "Generate QR codes" },
+    { id: "diff", name: "Text Diff", icon: "🔍", desc: "Compare texts" },
+    { id: "lorem", name: "Lorem Ipsum", icon: "📝", desc: "Generate placeholder text" }
   ];
 
   const guidesList = [
-    { title: "Getting Started with Flutter Web", desc: "Build responsive layouts using Material widgets." },
-    { title: "Mastering JSON in DevTools", desc: "Format & validate JSON structures quickly." },
-    { title: "Base64 Encoding Best Practices", desc: "Secure data transfer and decoding." },
-    { title: "Password Generator Logic", desc: "Entropy and secure randomness in JS." }
+    { title: "Flutter Web Best Practices", desc: "Responsive design & Material 3" },
+    { title: "JWT Security Guide", desc: "Verify & decode tokens safely" },
+    { title: "Regex for Developers", desc: "Pattern matching mastery" },
+    { title: "Password Entropy", desc: "How to generate strong passwords" }
   ];
 
-  // helper
+  const snippetsData = [
+    { lang: "JavaScript", title: "Deep Clone Object", code: "const clone = obj => JSON.parse(JSON.stringify(obj));" },
+    { lang: "Dart", title: "Flutter HTTP GET", code: "final res = await http.get(Uri.parse(url));" },
+    { lang: "Python", title: "JWT Decode", code: "import jwt; decoded = jwt.decode(token, options={'verify_signature': False})" },
+    { lang: "CSS", title: "Neumorphism", code: "box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;" }
+  ];
+
+  let activeTab = "home";
+  let darkMode = localStorage.getItem("rikiDarkMode") === "true";
+  let searchQuery = "";
+
   function showSnackbar(msg) {
     const snack = document.getElementById("snackbar");
     snack.textContent = msg || "Copied!";
@@ -404,233 +353,150 @@
   }
 
   function applyDarkMode() {
-    if (darkMode) {
-      document.body.classList.add("dark");
-      localStorage.setItem("rikiDarkMode", "true");
-    } else {
-      document.body.classList.remove("dark");
-      localStorage.setItem("rikiDarkMode", "false");
-    }
+    if (darkMode) document.body.classList.add("dark");
+    else document.body.classList.remove("dark");
+    localStorage.setItem("rikiDarkMode", darkMode);
     const toggleIcon = document.querySelector("#darkModeToggleBtn span");
     if (toggleIcon) toggleIcon.innerText = darkMode ? "light_mode" : "dark_mode";
   }
 
-  // page rendering logic (slide animation)
-  function renderPage() {
-    const main = document.getElementById("mainContent");
-    if (!main) return;
-    let html = "";
-    if (activeTab === "home") {
-      html = `
-        <div class="page-container">
-          <div class="material-card welcome-card ripple">
-            <h3>👋 Welcome, Developer</h3>
-            <p>RikiAppStore — your hub of lightweight dev utilities. No downloads, just instant tools.</p>
-          </div>
-          <div class="search-section">
-            <div class="search-field">
-              <span class="material-symbols-outlined">search</span>
-              <input type="text" id="homeSearchInput" placeholder="Search tools..." value="${searchQuery.replace(/"/g, '&quot;')}">
-            </div>
-          </div>
-          <div class="tools-grid" id="toolsGrid"></div>
-          <div class="ad-card">📢 Sponsor — Developer Toolkit Pro (Ad Space)</div>
-        </div>
-      `;
-    } 
-    else if (activeTab === "tools") {
-      html = `<div class="page-container"><div class="tools-grid" id="fullToolsGrid" style="padding:20px;"></div><div class="ad-card">🔧 All-in-one utilities — daily coding helpers</div></div>`;
-    } 
-    else if (activeTab === "guides") {
-      html = `<div class="page-container"><div id="guidesList"></div><div class="ad-card">📘 Documentation & Tutorials</div></div>`;
-    } 
-    else if (activeTab === "snippets") {
-      html = `<div class="page-container"><div id="snippetsContainer"></div><div class="ad-card">⚡ Code snippets for productivity</div></div>`;
-    } 
-    else if (activeTab === "profile") {
-      html = `<div class="page-container">
-        <div class="material-card">
-          <h3>👤 Profile</h3>
-          <div style="display: flex; justify-content: space-between; align-items: center; margin: 20px 0;">
-            <span>🌙 Dark Mode</span>
-            <button id="profileDarkToggle" class="fab-style" style="background:#475569;">Toggle ${darkMode ? "OFF" : "ON"}</button>
-          </div>
-          <hr style="margin:16px 0; opacity:0.2">
-          <p><strong>RikiAppStore</strong><br/>Version 2.0.0 (Flutter UI)</p>
-          <p>📧 riki@devtools.example<br/>💡 Open source PWA — Installable</p>
-          <button id="installGuideBtn" class="fab-style ripple" style="margin-top: 12px;">📲 Install as App</button>
-        </div>
-        <div class="ad-card">✨ Upgrade to Riki+ for extra features</div>
-      </div>`;
-    }
+  function escapeHtml(str) { return str.replace(/[&<>]/g, function(m){ if(m==='&') return '&amp;'; if(m==='<') return '&lt;'; if(m==='>') return '&gt;'; return m;}); }
 
-    main.innerHTML = html;
-    // post-render init components
-    if (activeTab === "home") {
-      renderToolsGrid("homeSearchInput", "toolsGrid");
-      const searchInput = document.getElementById("homeSearchInput");
-      if (searchInput) searchInput.addEventListener("input", (e) => { searchQuery = e.target.value; renderToolsGrid("homeSearchInput", "toolsGrid"); });
-    } 
-    else if (activeTab === "tools") {
-      renderAllToolsGrid();
+  // Tool specific UI rendering
+  function renderToolUI(toolId, container) {
+    const tool = toolsLibrary.find(t => t.id === toolId);
+    if (!tool) return;
+    if (toolId === "json") {
+      container.innerHTML = `<textarea id="jsonInput" rows="5" placeholder='{"name":"RikiAppStore","version":"2.0"}'></textarea><div class="flex-row"><button class="fab-style" id="formatJsonBtn">Format</button><button class="fab-style" id="copyJsonBtn">Copy</button></div><pre id="jsonOutput" class="code-block"></pre>`;
+      document.getElementById("formatJsonBtn")?.addEventListener("click",()=>{ try{ let val=JSON.parse(document.getElementById("jsonInput").value); document.getElementById("jsonOutput").innerText=JSON.stringify(val,null,2); showSnackbar("Formatted"); } catch(e){ document.getElementById("jsonOutput").innerText="Invalid JSON"; } });
+      document.getElementById("copyJsonBtn")?.addEventListener("click",()=>{ let txt=document.getElementById("jsonOutput").innerText; if(txt) navigator.clipboard.writeText(txt); showSnackbar("Copied!"); });
     }
-    else if (activeTab === "guides") {
-      const guidesDiv = document.getElementById("guidesList");
-      if (guidesDiv) {
-        guidesDiv.innerHTML = guidesList.map(g => `<div class="material-card ripple" style="margin-bottom:12px;"><h4>📖 ${g.title}</h4><p>${g.desc}</p><div style="font-size:0.8rem; color:#3b82f6;">Read more →</div></div>`).join('');
-      }
+    else if (toolId === "base64") {
+      container.innerHTML = `<textarea id="b64Input" rows="3" placeholder="Text to encode/decode"></textarea><div class="flex-row"><button class="fab-style" id="encode64">Encode</button><button class="fab-style" id="decode64">Decode</button></div><textarea id="b64Result" rows="3" readonly placeholder="Result"></textarea>`;
+      document.getElementById("encode64")?.addEventListener("click",()=>{ let val=document.getElementById("b64Input").value; document.getElementById("b64Result").value = btoa(unescape(encodeURIComponent(val))); showSnackbar("Encoded"); });
+      document.getElementById("decode64")?.addEventListener("click",()=>{ try{ let val=atob(document.getElementById("b64Input").value); document.getElementById("b64Result").value=decodeURIComponent(escape(val)); showSnackbar("Decoded"); } catch(e){ document.getElementById("b64Result").value="Invalid Base64"; } });
     }
-    else if (activeTab === "snippets") {
-      const snippetsDiv = document.getElementById("snippetsContainer");
-      if (snippetsDiv) {
-        snippetsDiv.innerHTML = snippetsData.map(s => `
-          <div class="material-card" style="margin-bottom:16px;">
-            <div style="display:flex; justify-content:space-between;"><span><span class="material-symbols-outlined" style="font-size:1.2rem;">code</span> <strong>${s.title}</strong>  <span class="language-tag" style="background:#334155; border-radius:20px; padding:2px 8px; font-size:0.7rem;">${s.lang}</span></span>
-            <button class="copySnippetBtn" data-code="${escapeHtml(s.code)}" style="background:#3b82f6; border:none; border-radius:30px; padding:4px 12px; color:white; cursor:pointer;">Copy</button></div>
-            <pre class="code-block"><code>${escapeHtml(s.code)}</code></pre>
-          </div>
-        `).join('');
-        document.querySelectorAll('.copySnippetBtn').forEach(btn => {
-          btn.addEventListener('click', (e) => {
-            const code = btn.getAttribute('data-code');
-            navigator.clipboard.writeText(code);
-            showSnackbar("Snippet copied!");
-          });
-        });
-      }
+    else if (toolId === "password") {
+      container.innerHTML = `<div>Length: <input type="number" id="passLen" value="12" min="6" max="32"></div><div><label><input type="checkbox" id="useSymbols" checked> Symbols</label></div><button class="fab-style" id="genPassBtn">Generate</button><input id="genPasswordField" readonly style="margin-top:12px;"><button id="copyPassBtn" class="fab-style" style="margin-top:8px;">Copy</button>`;
+      document.getElementById("genPassBtn")?.addEventListener("click",()=>{ const len=parseInt(document.getElementById("passLen").value); const symbols="!@#$%^&*()_+"; let chars="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"; if(document.getElementById("useSymbols").checked) chars+=symbols; let pwd=""; for(let i=0;i<len;i++) pwd+=chars.charAt(Math.floor(Math.random()*chars.length)); document.getElementById("genPasswordField").value=pwd; showSnackbar("Generated"); });
+      document.getElementById("copyPassBtn")?.addEventListener("click",()=>{ let p=document.getElementById("genPasswordField").value; if(p) navigator.clipboard.writeText(p); showSnackbar("Copied!"); });
     }
-    else if (activeTab === "profile") {
-      const profileToggle = document.getElementById("profileDarkToggle");
-      if (profileToggle) profileToggle.addEventListener("click", () => { darkMode = !darkMode; applyDarkMode(); renderPage(); });
-      const installBtn = document.getElementById("installGuideBtn");
-      if (installBtn && window.deferredPrompt) {
-        installBtn.addEventListener("click", () => { window.deferredPrompt.prompt(); });
-      } else if(installBtn) {
-        installBtn.addEventListener("click", () => showSnackbar("PWA ready: install from browser menu"));
-      }
+    else if (toolId === "color") {
+      container.innerHTML = `<input type="color" id="colorPicker" value="#3b82f6"><div id="colorPreview" style="background:#3b82f6; border-radius:24px; margin-top:16px; padding:24px; text-align:center;">#3b82f6</div><button id="copyColorBtn" class="fab-style">Copy HEX</button>`;
+      const picker = document.getElementById("colorPicker");
+      const preview = document.getElementById("colorPreview");
+      const update = () => { preview.style.backgroundColor = picker.value; preview.innerText = picker.value; };
+      picker.addEventListener("input", update);
+      update();
+      document.getElementById("copyColorBtn")?.addEventListener("click",()=>{ navigator.clipboard.writeText(picker.value); showSnackbar("Color copied"); });
     }
-  }
-
-  function escapeHtml(str) { return str.replace(/[&<>]/g, function(m){if(m==='&') return '&amp;'; if(m==='<') return '&lt;'; if(m==='>') return '&gt;'; return m;});}
-
-  function renderToolsGrid(searchInputId, containerId) {
-    const query = document.getElementById(searchInputId)?.value.toLowerCase() || searchQuery.toLowerCase();
-    const filtered = toolsLibrary.filter(t => t.name.toLowerCase().includes(query));
-    const gridContainer = document.getElementById(containerId);
-    if(gridContainer) {
-      gridContainer.innerHTML = filtered.map(tool => `
-        <div class="tool-card ripple" data-tool-id="${tool.id}">
-          <div class="tool-icon">${tool.icon}</div>
-          <div class="tool-name">${tool.name}</div>
-        </div>
-      `).join('');
-      document.querySelectorAll(`[data-tool-id]`).forEach(card => {
-        card.addEventListener('click', (e) => {
-          const toolId = card.getAttribute('data-tool-id');
-          openToolScreen(toolId);
-        });
-      });
+    else if (toolId === "url") {
+      container.innerHTML = `<textarea id="urlInput" rows="2" placeholder="https://example.com?name=hello world"></textarea><div class="flex-row"><button class="fab-style" id="encodeUrl">Encode</button><button class="fab-style" id="decodeUrl">Decode</button></div><textarea id="urlResult" rows="2" readonly></textarea>`;
+      document.getElementById("encodeUrl")?.addEventListener("click",()=>{ let val=document.getElementById("urlInput").value; document.getElementById("urlResult").value=encodeURIComponent(val); showSnackbar("Encoded"); });
+      document.getElementById("decodeUrl")?.addEventListener("click",()=>{ let val=document.getElementById("urlInput").value; document.getElementById("urlResult").value=decodeURIComponent(val); showSnackbar("Decoded"); });
     }
-  }
-
-  function renderAllToolsGrid() {
-    const container = document.getElementById("fullToolsGrid");
-    if(container) {
-      container.innerHTML = toolsLibrary.map(tool => `
-        <div class="tool-card ripple" data-tool-id="${tool.id}">
-          <div class="tool-icon">${tool.icon}</div>
-          <div class="tool-name">${tool.name}</div>
-        </div>
-      `).join('');
-      document.querySelectorAll(`[data-tool-id]`).forEach(card => {
-        card.addEventListener('click', (e) => { openToolScreen(card.getAttribute('data-tool-id')); });
-      });
+    else if (toolId === "jwt") {
+      container.innerHTML = `<textarea id="jwtInput" rows="3" placeholder="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."></textarea><button class="fab-style" id="decodeJwtBtn">Decode JWT</button><pre id="jwtOutput" class="code-block"></pre>`;
+      document.getElementById("decodeJwtBtn")?.addEventListener("click",()=>{ try{ let token = document.getElementById("jwtInput").value; let parts = token.split('.'); if(parts.length!==3) throw new Error(); let header = JSON.parse(atob(parts[0])); let payload = JSON.parse(atob(parts[1])); document.getElementById("jwtOutput").innerText = JSON.stringify({header, payload}, null, 2); showSnackbar("Decoded"); } catch(e){ document.getElementById("jwtOutput").innerText = "Invalid JWT format"; } });
+    }
+    else if (toolId === "regex") {
+      container.innerHTML = `<input id="regexPattern" placeholder="Pattern (e.g., \\d+)" style="margin-bottom:8px;"><input id="regexTestStr" placeholder="Test string"><button class="fab-style" id="testRegexBtn">Test</button><div id="regexResult" class="code-block" style="margin-top:12px;"></div>`;
+      document.getElementById("testRegexBtn")?.addEventListener("click",()=>{ try{ let pattern = document.getElementById("regexPattern").value; let flags = 'g'; let re = new RegExp(pattern, flags); let matches = document.getElementById("regexTestStr").value.match(re); document.getElementById("regexResult").innerHTML = matches ? `Matches: ${matches.join(', ')}` : "No match"; } catch(e){ document.getElementById("regexResult").innerHTML = "Invalid regex"; } });
+    }
+    else if (toolId === "hash") {
+      async function hashString(alg, str) { const enc = new TextEncoder(); const hash = await crypto.subtle.digest(alg, enc.encode(str)); return Array.from(new Uint8Array(hash)).map(b=>b.toString(16).padStart(2,'0')).join(''); }
+      container.innerHTML = `<textarea id="hashInput" placeholder="Text to hash"></textarea><select id="hashAlgo"><option value="SHA-256">SHA-256</option><option value="SHA-1">SHA-1</option><option value="MD5">MD5 (browser limited)</option></select><button class="fab-style" id="computeHashBtn">Generate Hash</button><textarea id="hashOutput" readonly></textarea>`;
+      document.getElementById("computeHashBtn")?.addEventListener("click", async () => { let txt = document.getElementById("hashInput").value; let algo = document.getElementById("hashAlgo").value; if(algo === "MD5") { document.getElementById("hashOutput").value = "MD5 not supported natively, use SHA"; return; } let hash = await hashString(algo, txt); document.getElementById("hashOutput").value = hash; showSnackbar("Hashed"); });
+    }
+    else if (toolId === "timestamp") {
+      container.innerHTML = `<div class="flex-row"><input id="unixInput" placeholder="Unix timestamp (seconds)"><button id="toDateBtn">→ Date</button></div><div class="flex-row"><input id="dateInput" type="datetime-local"><button id="toUnixBtn">→ Timestamp</button></div><div id="tsResult" class="code-block"></div>`;
+      document.getElementById("toDateBtn")?.addEventListener("click",()=>{ let ts = parseInt(document.getElementById("unixInput").value); if(isNaN(ts)) return; let d = new Date(ts*1000); document.getElementById("tsResult").innerText = d.toString(); });
+      document.getElementById("toUnixBtn")?.addEventListener("click",()=>{ let dval = document.getElementById("dateInput").value; let d = new Date(dval); if(!isNaN(d)) document.getElementById("tsResult").innerText = Math.floor(d.getTime()/1000); });
+    }
+    else if (toolId === "qr") {
+      container.innerHTML = `<input id="qrText" placeholder="Enter text or URL"><button class="fab-style" id="genQrBtn">Generate QR</button><div id="qrCanvas" style="text-align:center; margin-top:16px;"></div>`;
+      document.getElementById("genQrBtn")?.addEventListener("click",()=>{ let text = document.getElementById("qrText").value; if(!text) return; let qrDiv = document.getElementById("qrCanvas"); qrDiv.innerHTML = `<canvas id="qrCanvasElem" width="200" height="200"></canvas>`; let canvas = document.getElementById("qrCanvasElem"); if(typeof QRCode !== 'undefined') new QRCode(canvas, text); else qrDiv.innerHTML = `<div class="material-card">⚠️ QR library would load here. Use external QR library in production.</div>`; });
+    }
+    else if (toolId === "diff") {
+      container.innerHTML = `<textarea id="diffText1" rows="3" placeholder="Original text"></textarea><textarea id="diffText2" rows="3" placeholder="Modified text"></textarea><button class="fab-style" id="compareTextBtn">Compare</button><pre id="diffOutput" class="code-block"></pre>`;
+      document.getElementById("compareTextBtn")?.addEventListener("click",()=>{ let a=document.getElementById("diffText1").value; let b=document.getElementById("diffText2").value; if(a===b) document.getElementById("diffOutput").innerText = "Texts are identical"; else document.getElementById("diffOutput").innerText = "Different content (basic diff). First char diff at index: "+[...Array(Math.min(a.length,b.length))].findIndex(i=>a[i]!==b[i]); });
+    }
+    else if (toolId === "lorem") {
+      container.innerHTML = `<div><select id="loremCount"><option value="1">1 paragraph</option><option value="2">2 paragraphs</option><option value="3">3 paragraphs</option></select><button class="fab-style" id="genLoremBtn">Generate</button></div><textarea id="loremOutput" rows="6" readonly></textarea>`;
+      const loremText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.";
+      document.getElementById("genLoremBtn")?.addEventListener("click",()=>{ let count = parseInt(document.getElementById("loremCount").value); let result = Array(count).fill(loremText).join("\n\n"); document.getElementById("loremOutput").value = result; showSnackbar("Generated"); });
     }
   }
 
   function openToolScreen(toolId) {
-    const tool = toolsLibrary.find(t => t.id === toolId);
-    if(!tool) return;
     const main = document.getElementById("mainContent");
-    main.innerHTML = `<div class="page-container"><div class="material-card" style="margin:20px;"><div style="display:flex; gap:12px; align-items:center;"><span class="material-symbols-outlined" style="cursor:pointer;" id="backToPrev">arrow_back</span><h2>${tool.name}</h2></div><div id="toolWidgetArea"></div></div></div>`;
+    main.innerHTML = `<div class="page-container"><div class="material-card" style="margin:20px;"><div style="display:flex; gap:12px; align-items:center;"><span class="material-symbols-outlined" style="cursor:pointer;" id="backToPrev">arrow_back</span><h2>${toolsLibrary.find(t=>t.id===toolId)?.name}</h2></div><div id="toolWidgetArea"></div></div></div>`;
     document.getElementById("backToPrev").addEventListener("click", () => { renderPage(); });
-    const widgetArea = document.getElementById("toolWidgetArea");
-    if(toolId === "json") {
-      widgetArea.innerHTML = `<textarea id="jsonInput" rows="5" placeholder='{"name":"Riki"}'></textarea><div class="flex-row" style="margin-top:12px;"><button class="fab-style" id="formatJsonBtn">Format</button><button class="fab-style" id="copyJsonBtn">Copy</button></div><pre id="jsonOutput" class="code-block" style="margin-top:12px;"></pre>`;
-      document.getElementById("formatJsonBtn")?.addEventListener("click",()=>{try{let val=JSON.parse(document.getElementById("jsonInput").value);document.getElementById("jsonOutput").innerText=JSON.stringify(val,null,2);showSnackbar("Formatted");}catch(e){document.getElementById("jsonOutput").innerText="Invalid JSON";}});
-      document.getElementById("copyJsonBtn")?.addEventListener("click",()=>{let txt=document.getElementById("jsonOutput").innerText;if(txt)navigator.clipboard.writeText(txt);showSnackbar("Copied!");});
+    renderToolUI(toolId, document.getElementById("toolWidgetArea"));
+  }
+
+  function renderToolsGrid(containerId, filterQuery = "") {
+    const filtered = toolsLibrary.filter(t => t.name.toLowerCase().includes(filterQuery.toLowerCase()));
+    const grid = document.getElementById(containerId);
+    if(grid) {
+      grid.innerHTML = filtered.map(tool => `<div class="tool-card ripple" data-tool-id="${tool.id}"><div class="tool-icon">${tool.icon}</div><div class="tool-name">${tool.name}</div><div style="font-size:0.7rem; opacity:0.7;">${tool.desc}</div></div>`).join('');
+      document.querySelectorAll('[data-tool-id]').forEach(card => { card.addEventListener('click', (e) => { openToolScreen(card.getAttribute('data-tool-id')); }); });
     }
-    else if(toolId === "base64") {
-      widgetArea.innerHTML = `<textarea id="b64Input" rows="3" placeholder="Text to encode/decode"></textarea><div class="flex-row"><button class="fab-style" id="encode64">Encode</button><button class="fab-style" id="decode64">Decode</button></div><textarea id="b64Result" rows="3" readonly placeholder="Result"></textarea>`;
-      document.getElementById("encode64")?.addEventListener("click",()=>{let val=document.getElementById("b64Input").value;document.getElementById("b64Result").value=btoa(unescape(encodeURIComponent(val)));showSnackbar("Encoded");});
-      document.getElementById("decode64")?.addEventListener("click",()=>{try{let val=atob(document.getElementById("b64Input").value);document.getElementById("b64Result").value=decodeURIComponent(escape(val));showSnackbar("Decoded");}catch(e){document.getElementById("b64Result").value="Invalid Base64";}});
+  }
+
+  function renderPage() {
+    const main = document.getElementById("mainContent");
+    if(activeTab === "home") {
+      main.innerHTML = `<div class="page-container"><div class="material-card welcome-card ripple"><h3>👋 Welcome, Developer</h3><p>12+ professional dev tools: JWT, Regex, Hash, QR, Diff & more. Zero downloads, instant results.</p></div><div class="search-section"><div class="search-field"><span class="material-symbols-outlined">search</span><input type="text" id="homeSearchInput" placeholder="Search tools..."></div></div><div class="tools-grid" id="toolsGridHome"></div><div class="ad-card">🔥 RikiAppStore Pro — coming soon. Support dev tools!</div></div>`;
+      renderToolsGrid("toolsGridHome", "");
+      const inp = document.getElementById("homeSearchInput");
+      if(inp) inp.addEventListener("input", (e) => { renderToolsGrid("toolsGridHome", e.target.value); });
     }
-    else if(toolId === "password") {
-      widgetArea.innerHTML = `<div>Length: <input type="number" id="passLen" value="12" min="6" max="32"></div><div style="margin:12px 0"><label><input type="checkbox" id="useSymbols" checked> Symbols</label></div><button class="fab-style" id="genPassBtn">Generate Password</button><div><input id="genPasswordField" readonly style="width:100%; margin-top:12px; padding:12px; border-radius:24px;"></div><button id="copyPassBtn" class="fab-style" style="margin-top:8px;">Copy</button>`;
-      document.getElementById("genPassBtn")?.addEventListener("click",()=>{const len=parseInt(document.getElementById("passLen").value);const symbols="!@#$%^&*()_+";let chars="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";if(document.getElementById("useSymbols").checked) chars+=symbols;let pwd="";for(let i=0;i<len;i++) pwd+=chars.charAt(Math.floor(Math.random()*chars.length));document.getElementById("genPasswordField").value=pwd;showSnackbar("Generated");});
-      document.getElementById("copyPassBtn")?.addEventListener("click",()=>{let p=document.getElementById("genPasswordField").value;if(p)navigator.clipboard.writeText(p);showSnackbar("Copied!");});
+    else if(activeTab === "tools") {
+      main.innerHTML = `<div class="page-container"><div class="tools-grid" id="allToolsGrid" style="padding:20px;"></div><div class="ad-card">🛠️ All utilities — developer first</div></div>`;
+      renderToolsGrid("allToolsGrid", "");
     }
-    else if(toolId === "color") {
-      widgetArea.innerHTML = `<input type="color" id="colorPicker" value="#3b82f6"><div style="background:#f1f5f9; border-radius:24px; margin-top:16px; padding:24px; text-align:center;" id="colorPreview">Preview</div><button id="copyColorBtn" class="fab-style">Copy HEX</button>`;
-      const picker = document.getElementById("colorPicker");
-      const preview = document.getElementById("colorPreview");
-      const updateColor = () => { preview.style.backgroundColor = picker.value; preview.innerText = picker.value; };
-      picker.addEventListener("input", updateColor);
-      updateColor();
-      document.getElementById("copyColorBtn")?.addEventListener("click",()=>{navigator.clipboard.writeText(picker.value);showSnackbar("Color copied");});
+    else if(activeTab === "guides") {
+      main.innerHTML = `<div class="page-container"><div id="guidesList"></div><div class="ad-card">📚 Learning resources</div></div>`;
+      const guidesDiv = document.getElementById("guidesList");
+      if(guidesDiv) guidesDiv.innerHTML = guidesList.map(g => `<div class="material-card ripple" style="margin-bottom:12px;"><h4>📖 ${g.title}</h4><p>${g.desc}</p></div>`).join('');
     }
-    else if(toolId === "url") {
-      widgetArea.innerHTML = `<textarea id="urlInput" rows="2" placeholder="https://example.com?name=hello world"></textarea><div class="flex-row"><button class="fab-style" id="encodeUrl">Encode</button><button class="fab-style" id="decodeUrl">Decode</button></div><textarea id="urlResult" rows="2" readonly></textarea>`;
-      document.getElementById("encodeUrl")?.addEventListener("click",()=>{let val=document.getElementById("urlInput").value;document.getElementById("urlResult").value=encodeURIComponent(val);showSnackbar("Encoded");});
-      document.getElementById("decodeUrl")?.addEventListener("click",()=>{let val=document.getElementById("urlInput").value;document.getElementById("urlResult").value=decodeURIComponent(val);showSnackbar("Decoded");});
+    else if(activeTab === "snippets") {
+      main.innerHTML = `<div class="page-container"><div id="snippetsContainer"></div><div class="ad-card">⚡ Productivity snippets</div></div>`;
+      const snippetsDiv = document.getElementById("snippetsContainer");
+      if(snippetsDiv) {
+        snippetsDiv.innerHTML = snippetsData.map(s => `<div class="material-card"><div style="display:flex; justify-content:space-between;"><strong>${s.title}</strong><span style="background:#334155; border-radius:20px; padding:2px 10px;">${s.lang}</span><button class="copySnippetBtn" data-code="${escapeHtml(s.code)}" style="background:#3b82f6; border:none; border-radius:30px; padding:4px 12px; color:white;">Copy</button></div><pre class="code-block"><code>${escapeHtml(s.code)}</code></pre></div>`).join('');
+        document.querySelectorAll('.copySnippetBtn').forEach(btn => { btn.addEventListener('click', () => { navigator.clipboard.writeText(btn.getAttribute('data-code')); showSnackbar("Snippet copied!"); }); });
+      }
     }
+    else if(activeTab === "profile") {
+      main.innerHTML = `<div class="page-container"><div class="material-card"><h3>👤 Profile</h3><div style="display:flex; justify-content:space-between; margin:20px 0;"><span>🌙 Dark Mode</span><button id="profileDarkToggle" class="fab-style" style="background:#475569;">Toggle</button></div><hr><p><strong>RikiAppStore</strong><br/>Version 3.0.0 (Flutter PWA)</p><p>📧 riki@devtools.example<br/>⚡ 12+ integrated tools</p><button id="installPwaBtn" class="fab-style ripple">📲 Install as App</button></div><div class="ad-card">✨ Open source — forever free tools</div></div>`;
+      document.getElementById("profileDarkToggle")?.addEventListener("click", () => { darkMode = !darkMode; applyDarkMode(); renderPage(); });
+      document.getElementById("installPwaBtn")?.addEventListener("click", () => { if(window.deferredPrompt) window.deferredPrompt.prompt(); else showSnackbar("Install from browser menu"); });
+    }
+    buildBottomNav();
   }
 
   function buildBottomNav() {
     const navContainer = document.getElementById("bottomNav");
     const tabs = ["home", "tools", "guides", "snippets", "profile"];
     const icons = ["home", "build", "menu_book", "code", "person"];
-    const labels = ["Home", "Tools", "Guides", "Snippets", "Profile"];
+    const labels = ["Home", "Tools", "Guides", "Snippets", "Me"];
     navContainer.innerHTML = tabs.map((tab, idx) => `<button class="nav-item ripple ${activeTab===tab ? 'active' : ''}" data-tab="${tab}"><span class="material-symbols-outlined">${icons[idx]}</span><span>${labels[idx]}</span></button>`).join('');
-    document.querySelectorAll(".nav-item").forEach(btn => {
-      btn.addEventListener("click", (e) => {
-        activeTab = btn.getAttribute("data-tab");
-        renderPage();
-        buildBottomNav();
-      });
-    });
+    document.querySelectorAll(".nav-item").forEach(btn => { btn.addEventListener("click", () => { activeTab = btn.getAttribute("data-tab"); renderPage(); }); });
   }
 
-  // dark mode + event listeners
-  document.addEventListener("DOMContentLoaded", () => {
-    applyDarkMode();
-    buildBottomNav();
-    renderPage();
-    document.getElementById("darkModeToggleBtn")?.addEventListener("click", () => {
-      darkMode = !darkMode;
-      applyDarkMode();
-      renderPage();
-      buildBottomNav();
-    });
-    document.getElementById("searchGlobalBtn")?.addEventListener("click", () => {
-      activeTab = "home";
-      renderPage();
-      buildBottomNav();
-      setTimeout(()=>{ const inp = document.getElementById("homeSearchInput"); if(inp) inp.focus(); }, 100);
-    });
-    // Register service worker for PWA
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/service-worker.js').catch(err => console.log("SW err:", err));
-      });
-    }
-    let deferredPrompt;
-    window.addEventListener('beforeinstallprompt', (e) => {
-      e.preventDefault();
-      deferredPrompt = e;
-      window.deferredPrompt = deferredPrompt;
-    });
-  });
+  // Service Worker Registration
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => { navigator.serviceWorker.register('/service-worker.js').catch(err => console.log("SW err:", err)); });
+  }
+  let deferredPrompt;
+  window.addEventListener('beforeinstallprompt', (e) => { e.preventDefault(); deferredPrompt = e; window.deferredPrompt = deferredPrompt; });
+
+  document.getElementById("darkModeToggleBtn")?.addEventListener("click", () => { darkMode = !darkMode; applyDarkMode(); renderPage(); });
+  document.getElementById("searchGlobalBtn")?.addEventListener("click", () => { activeTab = "home"; renderPage(); setTimeout(()=>document.getElementById("homeSearchInput")?.focus(), 100); });
+  applyDarkMode();
+  renderPage();
 </script>
 </body>
 </html>
